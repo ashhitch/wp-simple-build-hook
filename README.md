@@ -1,0 +1,1 @@
+# wp-simple-build-hook

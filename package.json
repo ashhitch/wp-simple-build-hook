@@ -1,0 +1,32 @@
+{
+  "name": "wp-simple-build-hook",
+  "version": "4.2.0",
+  "description": "A simple build hook",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "wp-simple-build-hook.php"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashhitch/wp-simple-build-hook.git"
+  },
+  "author": "Ash Hitchcock",
+  "bugs": {
+    "url": "https://github.com/ashhitch/wp-simple-build-hook/issues"
+  },
+  "homepage": "https://github.com/ashhitch/wp-simple-build-hook#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.14.2",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md,php}": "wp-simple-build-hook.php"
+  }
+}
