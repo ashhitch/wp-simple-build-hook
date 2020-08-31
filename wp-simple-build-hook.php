@@ -68,8 +68,8 @@ class simpleWebHook
 
           public function create_plugin_settings_page()
           {
-            $run_deploys = apply_filters('simple_webhook_deploy_capability', 'manage_options');
-            $adjust_settings = apply_filters('simple_webhook_adjust_settings_capability', 'manage_options');
+            $run_deploys = apply_filters('simple_webhook_deploy_capability', 'publish_pages');
+            $adjust_settings = apply_filters('simple_webhook_adjust_settings_capability', 'publish_pages');
 
             if (current_user_can($run_deploys)) {
               $page_title = __('Deploy', 'simple-build-hook');
@@ -199,7 +199,7 @@ class simpleWebHook
           {
 
 
-            $run_deploys = apply_filters('simple_webhook_deploy_capability', 'manage_options');
+            $run_deploys = apply_filters('simple_webhook_deploy_capability', 'publish_pages');
 
             if (current_user_can($run_deploys)) {
               $webhook_address = get_option('webhook_address');
